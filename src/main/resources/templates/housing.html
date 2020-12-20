@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Housing</title>
+</head>
+<body>
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:insert="base :: header"></th:block>
+    <title>Housing.gov</title>
+</head>
+
+<body>
+<div class="container-fluid">
+    <nav th:replace="base :: nav "></nav>
+</div>
+<br/>
+<div class="container">
+    <iframe allowfullscreen="true" frameborder="0" height="800" mozallowfullscreen="true"
+            src="https://docs.google.com/presentation/d/e/2PACX-1vTfPcI2LTn3BUMNFIsr5W64skqklDO_GgrPeifp-iyaCPUWUznUy6ShK1D2IaL5XrXnqpyiqzC9Dvim/embed?start=false&loop=true&delayms=5000"
+            webkitallowfullscreen="true" width="1200"></iframe>
+</div>
+<div class="container">
+    <nav th:replace="base :: footer"></nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <th:block th:insert="base :: header"></th:block>
+    <title>Polymorphism</title>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <nav th:replace="base :: nav "></nav>
+</div>
+
+<br/>
+<div class="container">
+    <h2>Polymorphism</h2>
+    <br>
+    <p>Polymorphism is the ability of an object to take on many forms. The most common use of polymorphism in OOP occurs
+        when a parent class reference is used to refer to a child class object.</p>
+
+    <p>Any Java object that can pass more than one IS-A test is considered to be polymorphic. In Java, all Java objects
+        are
+        polymorphic since any object will pass the IS-A test for their own type and for the class Object.</p>
+
+    <p>It is important to know that the only possible way to access an object is through a reference variable. A
+        reference
+        variable can be of only one type. Once declared, the type of a reference variable cannot be changed.</p>
+
+    <p>The reference variable can be reassigned to other objects provided that it is not declared final. The type of the
+        reference variable would determine the methods that it can invoke on the object.</p>
+
+    <p>A reference variable can refer to any object of its declared type or any subtype of its declared type. A
+        reference
+        variable can be declared as a class or interface type.</p>
+
+    <p>A common example of polymorphism is constructors:</p>
+
+    <pre><code class=" java language- java">public class Person {
+
+    private String name;
+    private String gender;
+    private int age;
+
+    public Person() {
+
+    }
+
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person(String name, String gender) {
+        this.name = name;
+        this.gender = gender;
+    }
+
+    public Person(String name, String gender, int age) {
+        this.name = name;
+        this.gender = gender;
+        this.age = age;
+    }
+}
+</code></pre>
+    <p>The following code all utilize the concept of polymorphism. There can be multiple instances of the Person()
+        constructor method with the distinguishing feature among them all is the amount of parameters they take in. So
+        in
+        other words, you can create a new Person object from the Person class with a stated Name, Name and Gender, or
+        Name,
+        Gender, and Age.</p>
+</div>
+<div class="container">
+    <nav th:replace="base :: footer"></nav>
+</div>
+</body>
+</html>

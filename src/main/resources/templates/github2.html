@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:insert="base :: header"></th:block>
+    <title>Publishing your repository</title>
+
+</head>
+
+<body>
+<div class="container-fluid">
+    <nav th:replace="base :: nav "></nav>
+</div>
+<br/>
+<div class="container">
+
+    <h2>Publishing your repository</h2>
+    <br>
+    <h3>What is a repository?</h3>
+
+    <p>A repository is a storage space where you can access your project, its files, and all the versions of its files
+        that
+        Git saves.</p>
+
+    <h3>Create an empty repository on GitHub</h3>
+
+    <p>Before you can push your local repository to GitHub you first need to create an empty repository.</p>
+
+    <p>When you browse to your GitHub account you can click on the new repository button. The button looks like a plus
+        sign
+        and is found at the top right of the website.</p>
+
+    <p>Alternatively, you can simply browse to <a href="https://github.com/new">https://github.com/new</a>. Fill in the
+        name
+        your repository and click the large green button at the bottom of the page to finish the process of creating it.
+        Your repository will be located at <strong>https://github.com/{your GitHub user name}/MyNewRepository</strong>
+    </p>
+
+    <h3>Pushing your local repository to GitHub</h3>
+
+    <p>Now that you have a repository you can go back to your PC and push your existing repository to the one you just
+        created. Make sure you have configured your commit author and email.</p>
+
+    <p>Next, you need to tell your local version of Git about the remote repository. Your local branch is called
+        <strong>master</strong>.
+        Your remote branch is called <strong>origin</strong>.</p>
+
+    <p>You do this by typing:
+        <code>git remote add origin https://github.com/&lt;your GitHub user name&gt;/Products</code></p>
+
+    <p>The <code>git remote</code> command will add a new remote section called origin to our configuration.</p>
+
+    <p>View the git configuration with <code>git config --list</code> to check if your remote repository is initialized.
+    </p>
+
+    <p>Running <code>git remote</code> without any arguments will show you the remote repository aliases.</p>
+
+    <p>If you run the command with the -v option, as <code>git remote -v</code>, you can see the actual URL for each
+        alias.
+    </p>
+</div>
+<div class="container">
+    <nav th:replace="base :: footer"></nav>
+</div>
+</body>
+</html>
